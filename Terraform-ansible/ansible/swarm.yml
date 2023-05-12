@@ -1,0 +1,15 @@
+---
+- name: Initialize Docker Swarm 
+  hosts: manager
+  
+  become: yes
+  
+  tasks:
+   
+  - name: Docker Swarm initialize  
+    shell: docker swarm init   
+    register: token
+
+  - name: Docker Swarm token 
+    debug: 
+      var : token.stdout_lines
