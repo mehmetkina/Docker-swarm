@@ -1,5 +1,5 @@
 variable "key" {
-  default = "mehmet"
+  default = "your aws key name"
 }
 
 variable "instance_count" {
